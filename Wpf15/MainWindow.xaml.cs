@@ -33,9 +33,17 @@ namespace Wpf15
         }
         public enum MyEnum { None=0, New=1, Processing=2, Shipped=3, Received=4 }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ReadOnly_Button_Click(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine();
+            Console.WriteLine("ReadOnly_Button");
+        }
+        private void Auto_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Auto_Button");
+        }
+        private void Customize_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Customize_Button");
         }
     }
 }
