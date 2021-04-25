@@ -14,9 +14,9 @@
         FontFamily="{DynamicResource MaterialDesignFont}">
 
     <Window.Resources>
-        <ObjectDataProvider MethodName="GetValues" ObjectType="{x:Type local:MyEnum}" x:Key="GetEnumValues">
+        <ObjectDataProvider MethodName="GetValues" ObjectType="{x:Type local:MainWindow}" x:Key="GetEnumValues">
             <ObjectDataProvider.MethodParameters>
-                <x:Type TypeName="local:MyEnum"/>
+                <x:Type TypeName="local:MainWindow"/>
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
     </Window.Resources>
