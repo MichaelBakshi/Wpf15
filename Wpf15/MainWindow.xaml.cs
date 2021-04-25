@@ -27,11 +27,9 @@ namespace Wpf15
             InitializeComponent();
 
             orders.Add(new Order() { Id = 1, Name = "John", Surname = "Doe", Age = 20, Email = "JohnDoe@Mail.com", MembershipOwner = false, SumOfOrder = 153, OrderStatus = MyEnum.New });
-
             dgorders.ItemsSource = orders;
 
         }
-        public enum MyEnum { None=0, New=1, Processing=2, Shipped=3, Received=4 }
 
         private void ReadOnly_Button_Click(object sender, RoutedEventArgs e)
         {
@@ -46,4 +44,5 @@ namespace Wpf15
             Console.WriteLine("Customize_Button");
         }
     }
+    public enum MyEnum { None = 0, New = 1, Processing = 2, Shipped = 3, Received = 4 }
 }

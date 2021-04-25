@@ -14,9 +14,9 @@
         FontFamily="{DynamicResource MaterialDesignFont}">
 
     <Window.Resources>
-        <ObjectDataProvider MethodName="GetValues" ObjectType="{x:Type local:MainWindow}" x:Key="GetEnumValues">
+        <ObjectDataProvider MethodName="GetValues" ObjectType="{x:Type local:MyEnum}" x:Key="GetEnumValues">
             <ObjectDataProvider.MethodParameters>
-                <x:Type TypeName="local:MainWindow"/>
+                <x:Type TypeName="local:MyEnum"/>
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
     </Window.Resources>
@@ -46,9 +46,9 @@
             </DataGrid.Columns>
         </DataGrid>
         
-        <Button Content="Read_Only" HorizontalAlignment="Left" Margin="143,258,0,0" VerticalAlignment="Top" Width="75" Click="ReadOnly_Button_Click"/>
-        <Button Content="Auto" HorizontalAlignment="Left" Margin="143,258,0,0" VerticalAlignment="Top" Width="75" Click="Auto_Button_Click"/>
-        <Button Content="Customize" HorizontalAlignment="Left" Margin="143,258,0,0" VerticalAlignment="Top" Width="75" Click="Customize_Button_Click"/>
+        <Button Content="Read_Only" HorizontalAlignment="Left" Margin="15,258,0,0" VerticalAlignment="Top" Width="75" Click="ReadOnly_Button_Click"/>
+        <Button Content="Auto" HorizontalAlignment="Left" Margin="150,258,0,0" VerticalAlignment="Top" Width="75" Click="Auto_Button_Click"/>
+        <Button Content="Customize" HorizontalAlignment="Left" Margin="300,258,0,0" VerticalAlignment="Top" Width="75" Click="Customize_Button_Click"/>
         
     </Grid>
 </Window>
