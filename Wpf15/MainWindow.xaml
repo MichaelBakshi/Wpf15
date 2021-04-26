@@ -26,8 +26,35 @@
         <local:OrderUserControl  Name="dgorders" AutoGenerateColumns="False" Margin="0,0,-0.333,61.667" IsReadOnly="True" />
 
         <Button Content="Read_Only" HorizontalAlignment="Left" Margin="60,258,0,0" VerticalAlignment="Top" Width="120" Click="ReadOnly_Button_Click"/>
-        <Button Content="Auto" HorizontalAlignment="Left" Margin="270,258,0,0" VerticalAlignment="Top" Width="75" Click="Auto_Button_Click"/>
-        <Button Content="Customize" HorizontalAlignment="Left" Margin="450,258,0,0" VerticalAlignment="Top" Width="75" Click="Customize_Button_Click"/>
         
+        <local:OrderUserControl  Name="dgordersFalse" AutoGenerateColumns="False" Margin="0,0,-0.333,61.667" IsReadOnly="false" />
+
+     
+        <Button Content="Auto" HorizontalAlignment="Left" Margin="270,258,0,0" VerticalAlignment="Top" Width="75" Click="Auto_Button_Click"/>
+       
+        <local:OrderUserControl  Name="dgorders" AutoGenerateColumns="False" Margin="0,0,-0.333,61.667" IsReadOnly="false" />
+
+        <DataGrid.Columns>
+            <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
+            <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+            <DataGridTextColumn Header="Surname" Binding="{Binding Surname}"/>
+            <DataGridTextColumn Header="Birthday" Binding="{Binding Birthday}"/>
+            <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+
+            <DataGridTemplateColumn Header="MembershipOwner">
+                <DataGridTemplateColumn.CellTemplate>
+                    <DataTemplate>
+                        <CheckBox IsChecked="{Binding MembershipOwner, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                    </DataTemplate>
+                </DataGridTemplateColumn.CellTemplate>
+            </DataGridTemplateColumn>
+
+            <DataGridTextColumn Header="SumOfOrder" Binding="{Binding SumOfOrder}"/>
+
+            <DataGridComboBoxColumn Header="OrderStatus" ItemsSource="{Binding Source={StaticResource GetEnumValues}}"
+                                        SelectedValueBinding="{Binding OrderStatus}"  />
+
+        </DataGrid.Columns>
+        <Button Content="Customize" HorizontalAlignment="Left" Margin="450,258,0,0" VerticalAlignment="Top" Width="75" Click="Customize_Button_Click"/>
     </Grid>
 </Window>

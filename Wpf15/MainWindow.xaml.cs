@@ -27,20 +27,23 @@ namespace Wpf15
             InitializeComponent();
 
             orders.Add(new Order() { Id = 1, Name = "John", Surname = "Doe", Age = 20, Email = "JohnDoe@Mail.com", MembershipOwner = false, SumOfOrder = 153, OrderStatus = MyEnum.New });
-            dgorders.ItemsSource = orders;
+            this.DataContext = this;
 
         }
 
         private void ReadOnly_Button_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = dgorders;
             Console.WriteLine("ReadOnly_Button");
         }
         private void Auto_Button_Click(object sender, RoutedEventArgs e)
         {
+            this.DataContext = dgordersFalse;
             Console.WriteLine("Auto_Button");
         }
         private void Customize_Button_Click(object sender, RoutedEventArgs e)
         {
+
             Console.WriteLine("Customize_Button");
         }
     }

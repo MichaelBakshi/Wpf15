@@ -15,6 +15,7 @@ namespace Wpf15
         public int Age { get; set; }
         public string Email { get; set; }
         public bool MembershipOwner { get; set; }
+        public DateTime Birthday { get; set; }
         public double SumOfOrder { get; set; }
         public MyEnum OrderStatus { get; set; }
     }
