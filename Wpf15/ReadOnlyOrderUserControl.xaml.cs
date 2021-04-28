@@ -24,10 +24,8 @@ namespace Wpf15
         public ReadOnlyOrderUserControl()
         {
             orders.Add(new Order() { Id = 1, Name = "John", Surname = "Doe", Age = 20, Email = "JohnDoe@Mail.com", MembershipOwner = false, SumOfOrder = 153, OrderStatus = MyEnum.New });
-            orders.Add(new Order() { Id = 2, Name = "Jack", Surname = "Doe", Age = 27, Email = "John@Mail.com", MembershipOwner = true, SumOfOrder = 354, OrderStatus = MyEnum.Processing });
-            orders.Add(new Order() { Id = 3, Name = "Julie", Surname = "Doe", Age = 21, Email = "Johoe@Mail.com", MembershipOwner = false, SumOfOrder = 14, OrderStatus = MyEnum.New });
-            orders.Add(new Order() { Id = 4, Name = "Jil", Surname = "Doe", Age = 24, Email = "Johnoe@Mail.com", MembershipOwner = true, SumOfOrder = 120, OrderStatus = MyEnum.Received });
-            orders.Add(new Order() { Id = 5, Name = "Johan", Surname = "Doe", Age = 22, Email = "JnDoe@Mail.com", MembershipOwner = false, SumOfOrder = 234, OrderStatus = MyEnum.New });
+            orders.Add(new Order() { Id = 2, Name = "Jack", Surname = "Jill", Age = 27, Email = "Jill@Mail.com", MembershipOwner = true, SumOfOrder = 354, OrderStatus = MyEnum.Processing });
+            orders.Add(new Order() { Id = 3, Name = "Mark", Surname = "Kruz", Age = 21, Email = "Mark@Mail.com", MembershipOwner = false, SumOfOrder = 142, OrderStatus = MyEnum.Received });
 
             InitializeComponent();
             dgOrders.ItemsSource = orders;

@@ -26,9 +26,8 @@ namespace Wpf15
 
             orders.Add(new Order() { Id = 1, Name = "John", Surname = "Doe", Birthday = new DateTime(2005, 12, 03), Email = "JohnDoe@Mail.com", MembershipOwner = false, SumOfOrder = 153, OrderStatus = MyEnum.New });
             orders.Add(new Order() { Id = 2, Name = "Jack", Surname = "Doe", Birthday = new DateTime(1984, 08, 09), Email = "John@Mail.com", MembershipOwner = true, SumOfOrder = 354, OrderStatus = MyEnum.Processing });
-            orders.Add(new Order() { Id = 3, Name = "Julie", Surname = "Doe", Birthday = new DateTime(1979, 07, 13), Email = "Johoe@Mail.com", MembershipOwner = false, SumOfOrder = 14, OrderStatus = MyEnum.New });
-            orders.Add(new Order() { Id = 4, Name = "Jil", Surname = "Doe", Birthday = new DateTime(1999, 11, 03), Email = "Johnoe@Mail.com", MembershipOwner = true, SumOfOrder = 120, OrderStatus = MyEnum.Received });
-            orders.Add(new Order() { Id = 5, Name = "Johan", Surname = "Doe", Birthday = new DateTime(1980, 05, 23), Email = "JnDoe@Mail.com", MembershipOwner = false, SumOfOrder = 234, OrderStatus = MyEnum.New });
+            orders.Add(new Order() { Id = 3, Name = "Julie", Surname = "Roberts", Birthday = new DateTime(1979, 07, 13), Email = "Julie@Mail.com", MembershipOwner = false, SumOfOrder = 142, OrderStatus = MyEnum.Shipped });
+            orders.Add(new Order() { Id = 4, Name = "Tom", Surname = "Cruise", Birthday = new DateTime(1999, 11, 03), Email = "Tom@Mail.com", MembershipOwner = true, SumOfOrder = 120, OrderStatus = MyEnum.Received });
 
             InitializeComponent();
             dgOrders.ItemsSource = orders;
