@@ -19,4 +19,6 @@ namespace Wpf15
         public double SumOfOrder { get; set; }
         public MyEnum OrderStatus { get; set; }
     }
+        public enum MyEnum { None = 0, New = 1, Processing = 2, Shipped = 3, Received = 4 }
+
 }

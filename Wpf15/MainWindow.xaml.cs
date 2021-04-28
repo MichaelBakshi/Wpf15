@@ -20,32 +20,34 @@ namespace Wpf15
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<Order> orders = new List<Order>();
-
         public MainWindow()
         {
             InitializeComponent();
 
-            orders.Add(new Order() { Id = 1, Name = "John", Surname = "Doe", Age = 20, Email = "JohnDoe@Mail.com", MembershipOwner = false, SumOfOrder = 153, OrderStatus = MyEnum.New });
-            this.DataContext = this;
-
+            Auto.Visibility = Visibility.Hidden;
+            ReadOnly.Visibility = Visibility.Visible;
+            Customize.Visibility = Visibility.Hidden;
         }
 
-        private void ReadOnly_Button_Click(object sender, RoutedEventArgs e)
+        private void Read_Only_Click(object sender, RoutedEventArgs e)
         {
-            this.DataContext = dgorders;
-            Console.WriteLine("ReadOnly_Button");
+            Auto.Visibility = Visibility.Hidden;
+            ReadOnly.Visibility = Visibility.Visible;
+            Customize.Visibility = Visibility.Hidden;
         }
-        private void Auto_Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.DataContext = dgordersFalse;
-            Console.WriteLine("Auto_Button");
-        }
-        private void Customize_Button_Click(object sender, RoutedEventArgs e)
-        {
 
-            Console.WriteLine("Customize_Button");
+        private void Auto__Click(object sender, RoutedEventArgs e)
+        {
+            Auto.Visibility = Visibility.Visible;
+            ReadOnly.Visibility = Visibility.Hidden;
+            Customize.Visibility = Visibility.Hidden;
+        }
+
+        private void Customize__Click(object sender, RoutedEventArgs e)
+        {
+            Auto.Visibility = Visibility.Hidden;
+            ReadOnly.Visibility = Visibility.Hidden;
+            Customize.Visibility = Visibility.Visible;
         }
     }
-    public enum MyEnum { None = 0, New = 1, Processing = 2, Shipped = 3, Received = 4 }
 }
